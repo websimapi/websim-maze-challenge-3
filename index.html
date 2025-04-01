@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "youtube-player": "https://cdn.skypack.dev/youtube-player"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Finish this maze to receive unlimited cake</h1>
+        <div id="maze-container">
+            <div id="maze"></div>
+            <div id="player"></div>
+            <div id="treasure" class="hidden">
+                <div id="play-button"></div>
+            </div>
+        </div>
+        <div id="controls">
+            <div class="controls-row">
+                <button id="up">↑</button>
+            </div>
+            <div class="controls-row">
+                <button id="left">←</button>
+                <button id="right">→</button>
+            </div>
+            <div class="controls-row">
+                <button id="down">↓</button>
+            </div>
+        </div>
+        <div id="message">Use arrow keys or buttons to navigate the maze!</div>
+    </div>
+    <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
