@@ -18,6 +18,9 @@ const treasureElement = document.getElementById('treasure');
 const playButton = document.getElementById('play-button');
 const messageElement = document.getElementById('message');
 
+// Remove the 'hidden' class from treasure on initial load
+treasureElement.classList.remove('hidden');
+
 // Control buttons
 document.getElementById('up').addEventListener('click', () => movePlayer(0, -1));
 document.getElementById('down').addEventListener('click', () => movePlayer(0, 1));
@@ -153,10 +156,7 @@ function positionPlayer() {
     
     // Check if player reached the treasure
     if (playerPosition.x === treasurePosition.x && playerPosition.y === treasurePosition.y) {
-        treasureElement.classList.remove('hidden');
         messageElement.textContent = "Click the chest to claim your reward!";
-    } else {
-        treasureElement.classList.add('hidden');
     }
 }
 
@@ -199,12 +199,13 @@ function playRickroll() {
         youtubeContainer = document.createElement('div');
         youtubeContainer.id = 'youtube-container';
         const youtubeWrapper = document.createElement('div');
+        youtubeWrapper.id = 'youtube-player';
         youtubeWrapper.className = 'youtube-wrapper';
         youtubeContainer.appendChild(youtubeWrapper);
         document.body.appendChild(youtubeContainer);
         
         // Create the player
-        player = YouTubePlayer('youtube-container', {
+        player = YouTubePlayer('youtube-player', {
             videoId: 'dQw4w9WgXcQ',
             playerVars: {
                 autoplay: 1,
@@ -230,4 +231,3 @@ function decodeSeed(encoded) {
     }
     return decoded;
 }
-
